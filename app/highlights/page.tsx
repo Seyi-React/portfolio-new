@@ -28,8 +28,8 @@ export default function Highlights() {
             className="rounded-full"
           />
           <div>
-            <h2 className="font-medium">Aj Fred</h2>
-            <p className="text-sm text-muted-foreground">Frontend Developer</p>
+            <h2 className="font-medium">Oluwaseyi Adeoti</h2>
+            <p className="text-sm text-muted-foreground">Full stack Developer</p>
           </div>
         </div>
 
@@ -59,19 +59,19 @@ export default function Highlights() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="https://x.com/iamajfred_"
+            href="https://x.com/engrAdeoti"
             className="text-muted-foreground hover:text-foreground"
           >
             <Twitter className="w-5 h-5" />
           </Link>
           <Link
-            href="https://github.com/ajfred20"
+            href="https://github.com/seyi-react"
             className="text-muted-foreground hover:text-foreground"
           >
             <Github className="w-5 h-5" />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/fred-aj/"
+            href="https://www.linkedin.com/in/oluwaseyi-adeoti-594317344/"
             className="text-muted-foreground hover:text-foreground"
           >
             <Linkedin className="w-5 h-5" />

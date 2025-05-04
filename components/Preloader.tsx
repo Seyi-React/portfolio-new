@@ -99,14 +99,14 @@ export default function Preloader() {
               className="text-3xl md:text-5xl text-white font-bold"
               variants={textVariants}
             >
-              <TypewriterText text="Hey there! I'm Aj Fred" delay={2000} />
+              <TypewriterText text="Hey there! I'm Oluwaseyi Adeoti" delay={2000} />
             </motion.h1>
 
             <motion.p
               className="text-xl md:text-3xl text-gray-300"
               variants={textVariants}
             >
-              <TypewriterText text="And Welcome to my domain..." delay={3000} />
+              <TypewriterText text="And Welcome to my world..." delay={3000} />
             </motion.p>
 
             <motion.p

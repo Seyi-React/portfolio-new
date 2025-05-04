@@ -82,22 +82,27 @@ export default function Home() {
               className="rounded-full w-8 h-8 lg:w-10 lg:h-10"
             />
             <div>
-              <h2 className="font-medium text-sm lg:text-base">Aj Fred</h2>
+              <h2 className="font-medium text-sm lg:text-base">
+                Oluwaseyi Adeoti
+              </h2>
               <p className="text-xs lg:text-sm text-muted-foreground">
-                Frontend Developer
+                Full Stack Developer
               </p>
             </div>
           </div>
         </div>
 
         <nav className="flex items-center gap-4 lg:gap-6">
-          <Link href="https://x.com/iamajfred_">
+          <Link href="https://x.com/engrAdeoti">
             <Twitter className="w-4 h-4 lg:w-5 lg:h-5" />
           </Link>
-          <Link href="https://www.linkedin.com/in/fred-aj/">
+          <Link href="https://www.linkedin.com/in/oluwaseyi-adeoti-594317344/">
             <Linkedin className="w-4 h-4 lg:w-5 lg:h-5" />
           </Link>
-          <Link href="https://github.com/ajfred20" className="hover:opacity-80">
+          <Link
+            href="https://github.com/seyi-react"
+            className="hover:opacity-80"
+          >
             <Github className="w-4 h-4 lg:w-5 lg:h-5" />
           </Link>
           <Link
@@ -154,23 +159,18 @@ export default function Home() {
           />
 
           <h1 className="text-3xl lg:text-5xl font-bold mb-4 tracking-[-0.02em]">
-            Hey, I&apos;m Aj Fred.
+            Hey, I&apos;m Oluwaseyi Adeoti.
             <br />
-            <span className="text-gradient font-fancy">Dreamer </span>,
-            Developer &{" "}
-            <Image
-              src="/figma.svg"
-              alt="Figma"
-              width={52}
-              height={52}
-              className="inline-flex rounded-lg mx-1 w-8 h-8 lg:w-12 lg:h-12"
-            />{" "}
-            Designer
+            <span className="text-gradient font-fancy">Dreamer </span>, Snr
+            Developer & Tech savy
           </h1>
 
           <p className="text-sm lg:text-base text-gray-600 mb-6 lg:mb-8 max-w-xl">
-            Crafting seamless experiences and bold visuals. High school student
-            by day, creative thinker, and aspiring innovator by 🌙 night.
+            Architecting robust systems and exceptional user experiences with
+            precision and innovation. Seasoned senior engineer by profession,
+            creative problem-solver and technical visionary by nature.
+            Transforming complex challenges into elegant solutions—day and 🌙
+            night.
           </p>
 
           <div className="flex gap-3 lg:gap-4">
@@ -185,12 +185,12 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              Available for new project
+              Available for opportunities
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center text-center mt-12">
+        {/* <div className="flex flex-col items-center text-center mt-12">
           <h1 className="text-3xl lg:text-5xl font-bold mb-4 tracking-[-0.02em] flex items-center justify-center gap-2">
             Some of My <span className="font-fancy">Works</span>
           </h1>
@@ -285,6 +285,119 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div> */}
+
+        <div className="flex flex-col items-center text-center mt-12">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-4 tracking-[-0.02em] flex items-center justify-center gap-2">
+            Professional <span className="font-fancy">Experience</span>
+          </h1>
+
+          <p className="text-sm lg:text-base text-gray-600 mb-8 max-w-xl">
+            Highlights from my 5+ years as a Full-Stack Developer specializing
+            in UI design and frontend engineering
+          </p>
+
+          <div className="grid grid-cols-1 gap-8 w-full max-w-5xl mx-auto">
+            {[
+              {
+                company: "Sterling Bank Plc",
+                role: "Senior Frontend Developer",
+                period: "Jul 2023 - Present",
+                description:
+                  "Led migration from legacy systems to modern React based arcitecture ,improving maintainability platform and reducing bug rates. Implemented micro-frontend architecture that improved site performance by 40% and reduced deployment time by 60%. Worked as a guide to Bakend engr to folow best pratices of encrytion and decrytion of sensitive data's.",
+                technologies: [
+                  "React",
+                  "TypeScript",
+                  "Redux",
+                  "Micro Frontends",
+                  "Tailwind CSS",
+                  "Chakra UI",
+                ],
+                logo: "/assets/company1.png",
+              },
+              {
+                company: "Trip Value",
+                role: "Lead Frontend Developer",
+                period: "Jan 2022 - Jun 2023",
+                description:
+                  "Developed logistic infrastructure and payment processing system allowing users to seamless make payment. Mentored Juinor developers,performing code reviews ensuring best architecture and best approach followed. Optimized Existing codebase using modern tools.",
+                technologies: [
+                  "Next.js",
+                  "React",
+                  "TypeScript",
+                  "CSS",
+                  "Material UI ",
+                  "Styled Components",
+                ],
+                logo: "/assets/company2.png",
+              },
+              {
+                company: "Aglow Digital",
+                role: "Frontend Developer",
+                period: "Oct 2021 - Dec 2022",
+                description:
+                  "Built responsive user interfaces for fintech applications. Collaborated with UX designers to implement pixel-perfect designs. Participated in agile development cycles and delivered features consistently ahead of schedule.",
+                technologies: [
+                  "JavaScript",
+                  "React",
+                  "SCSS",
+                  "RESTful APIs",
+                  "Jest",
+                ],
+                logo: "/assets/company3.png",
+              },
+              {
+                company: "Aid Me",
+                role: "Frontend Developer",
+                period: "Feb 2020 - Oct 2021",
+                description:
+                  "Built responsive user interfaces alongisde developers in a startup. Collaborated with Backend engr's to deliver fast rising solution in startup ,connecting service renders and service service needers.",
+                technologies: [
+                  "JavaScript",
+                  " Monolithic React",
+                  "Module CSS",
+                  "RESTful APIs",
+                  "HTML",
+                ],
+                logo: "/assets/company3.png",
+              },
+            ].map((job, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 lg:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 w-full text-left border border-gray-100"
+              >
+                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+                  <div className="w-16 h-16 relative bg-gray-100 rounded-lg overflow-hidden">
+                    {/* You can replace with actual company logos */}
+                    <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-500">
+                      {job.company.charAt(0)}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl lg:text-2xl font-bold">
+                      {job.role}
+                    </h3>
+                    <p className="text-gray-600">
+                      {job.company} • {job.period}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 mb-4">{job.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {job.technologies.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col items-center text-center mt-20 lg:mt-32 relative">
@@ -293,7 +406,7 @@ export default function Home() {
             <span className="font-fancy text-2xl lg:text-4xl">Say</span>
           </h1>
           <p className="text-gray-600 -mb-3 max-w-xl font-fancy text-xl lg:text-2xl">
-            My clients trust me
+            My collegeaues trust me
           </p>
 
           <div className="relative w-full max-w-3xl mx-auto h-[300px] lg:h-[400px]">
@@ -409,10 +522,10 @@ export default function Home() {
               <p className="text-gray-400 text-xs lg:text-sm">
                 © {new Date().getFullYear()} by{" "}
                 <a
-                  href="https://x.com/iamajfred_"
+                  href="https://x.com/engrAdeoti"
                   className="hover:bg-gradient-to-r hover:from-purple-500 hover:via-pink-500 hover:to-blue-500 hover:text-transparent hover:bg-clip-text hover:animate-gradient transition-all duration-300"
                 >
-                  Aj Fred
+                  Oluwaseyi Adeoti
                 </a>
                 . All rights reserved.
               </p>

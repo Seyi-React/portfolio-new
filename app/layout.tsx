@@ -15,22 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aj Fred",
+  title: "Oluwaseyi Adeoyi",
   description: "Frontend Developer",
   icons: {
     icon: "/favicon.ico?v=1",
   },
   openGraph: {
-    title: "Fred Aj - Frontend Developer",
+    title: "Oluwaseyi Adeoti - Frontend Developer",
     description: "Frontend Developer crafting amazing user interfaces",
     url: "https://ajfred.vercel.app",
-    siteName: "Fred Aj Portfolio",
+    siteName: "Engr Seyi Portfolio",
     images: [
       {
         url: "/assets/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Fred Aj - Frontend Developer",
+        alt: "Oluwaseyi  - Frontend Developer",
       },
     ],
     locale: "en_US",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aj Fred - Frontend Developer",
+    title: "Ouwaseyi Adeoti - Full stack Developer",
     description: "Frontend Developer crafting amazing user interfaces",
     creator: "@iamajfred_",
     images: ["/assets/og-image.jpg"],

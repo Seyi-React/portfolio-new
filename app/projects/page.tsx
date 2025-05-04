@@ -95,8 +95,8 @@ export default function Projects() {
             className="rounded-full"
           />
           <div>
-            <h2 className="font-medium">Aj Fred</h2>
-            <p className="text-sm text-muted-foreground">Frontend Developer</p>
+            <h2 className="font-medium">Oluwaseyi Adeoti</h2>
+            <p className="text-sm text-muted-foreground">Fullstack Developer</p>
           </div>
         </div>
 
@@ -126,19 +126,19 @@ export default function Projects() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="https://x.com/iamajfred_"
+            href="https://x.com/EngrAdeoti"
             className="text-muted-foreground hover:text-foreground"
           >
             <Twitter className="w-5 h-5" />
           </Link>
           <Link
-            href="https://github.com/ajfred20"
+            href="https://github.com/seyi-react"
             className="text-muted-foreground hover:text-foreground"
           >
             <Github className="w-5 h-5" />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/fred-aj/"
+            href="https://www.linkedin.com/in/seyi-240/"
             className="text-muted-foreground hover:text-foreground"
           >
             <Linkedin className="w-5 h-5" />
@@ -220,28 +220,28 @@ export default function Projects() {
           <p className="text-muted-foreground mb-4">
             Reach out to me{" "}
             <Link
-              href="mailto:ajfred2008@gmail.com"
+              href="mailto:oluwaseyiadeoti825@gmail.com"
               className="text-blue-600 hover:text-blue-700 inline-flex items-center gap-1"
             >
-              ajfred2008@gmail.com <ArrowUpRight className="w-4 h-4" />
+             oluwaseyiadeoti825@gmail.com <ArrowUpRight className="w-4 h-4" />
             </Link>
           </p>
 
           <div className="flex gap-4">
             <Link
-              href="https://github.com/ajfred20"
+              href="https://github.com/seyi-react"
               className="text-foreground hover:text-blue-600"
             >
               Github <ArrowUpRight className="w-4 h-4 inline" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/fred-aj/"
+              href="https://www.linkedin.com/in/seyi-240/"
               className="text-foreground hover:text-blue-600"
             >
               Linkedin <ArrowUpRight className="w-4 h-4 inline" />
             </Link>
             <Link
-              href="https://x.com/iamajfred_"
+              href="https://x.com/EngrAdeoti"
               className="text-foreground hover:text-blue-600"
             >
               Twitter <ArrowUpRight className="w-4 h-4 inline" />
