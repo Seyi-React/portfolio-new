@@ -290,55 +290,60 @@ export default function Projects() {
         </div>
 
         {activeFilter === "All" && (
-          <>
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 flex items-center">
-                <Lock className="mr-2" /> Enterprise Banking Projects
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {filteredProjects
-                  .filter((project) => project.type === "Enterprise")
-                  .map((project) => (
-                    <ProjectCard key={project.title} {...project} />
-                  ))}
-              </div>
-            </div>
+  <>
+    {/* Enterprise Projects */}
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold mb-4 flex items-center">
+        <Lock className="mr-2" /> Enterprise Banking Projects
+      </h2>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {filteredProjects
+          .filter((project) => project.type === "Enterprise")
+          .map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+      </div>
+    </div>
 
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 flex items-center">
-                <Layout className="mr-2" /> Frontend Projects
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {filteredProjects
-                  .filter((project) => project.type === "Frontend" && project.type !== "Enterprise")
-                  .map((project) => (
-                    <ProjectCard key={project.title} {...project} />
-                  ))}
-              </div>
-            </div>
+    {/* Frontend Projects */}
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold mb-4 flex items-center">
+        <Layout className="mr-2" /> Frontend Projects
+      </h2>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {filteredProjects
+          .filter((project) => project.type === "Frontend")
+          .map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+      </div>
+    </div>
 
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 flex items-center">
-                <Code className="mr-2" /> Backend Projects
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {filteredProjects
-                  .filter((project) => project.type === "Backend" && project.type !== "Enterprise")
-                  .map((project) => (
-                    <ProjectCard key={project.title} {...project} />
-                  ))}
-              </div>
-            </div>
-          </>
-        )}
+    {/* Backend Projects */}
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold mb-4 flex items-center">
+        <Code className="mr-2" /> Backend Projects
+      </h2>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {filteredProjects
+          .filter((project) => project.type === "Backend")
+          .map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+      </div>
+    </div>
+  </>
+)}
 
-        {(activeFilter !== "All") && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {filteredProjects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
-          </div>
-        )}
+{/* Active filter is not 'All' */}
+{activeFilter !== "All" && (
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+    {filteredProjects.map((project) => (
+      <ProjectCard key={project.title} {...project} />
+    ))}
+  </div>
+)}
+
         
         {/* Technical Leadership Section */}
         <section className="mt-16 mb-12 bg-gray-50 border rounded-lg p-6">
