@@ -39,10 +39,10 @@ export default function Home() {
 
     try {
       const result = await emailjs.send(
-        "service_6jzme7g", // Your service ID
-        "template_s9qz4eo", // Your template ID
+        "service_em85hnb", // Your service ID
+        "template_ll9i5g9", // Your template ID
         templateParams,
-        "PzeejNvHRD0SfQ0JE" // Your public key
+        "Tt6cR6_SWblpXuwst" // Your public key
       );
 
       if (result.text === "OK") {
@@ -478,7 +478,8 @@ export default function Home() {
           </p>
 
           <form
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
+            name="contact" netlify
             className="w-full max-w-2xl mx-auto space-y-4 lg:space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">

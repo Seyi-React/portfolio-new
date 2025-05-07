@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,7 +14,22 @@ import {
   ImageIcon,
 } from "lucide-react";
 
+
+
 import { Button } from "@/components/ui/button";
+// import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+// import Link from "next/link";
+import {  Mail } from "lucide-react";
+
+
+
+  // const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  
+  // useEffect(() => {
+ 
+  //   setCurrentYear(new Date().getFullYear());
+  // }, []);
 
 export default function Highlights() {
   return (
@@ -111,185 +128,169 @@ export default function Highlights() {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-16 mb-20 md:mb-0">
-        <h1 className="text-5xl font-bold text-center mb-4">
-          My <span className="text-gradient font-fancy">2024</span> in style{" "}
-        </h1>
 
-        <p className="text-center text-muted-foreground mb-12">
-          Celebrating milestones, achievements, and major accomplishments.
-        </p>
 
-        <div className="space-y-12">
-          {/* Academic Milestones */}
-          <section>
-            <h2 className="text-2xl font-medium mb-4">My Milestones</h2>
-            <p className="mb-4">
-              Got over a 100 students @{" "}
-              <Link
-                href="https://www.waitlist-rydon.vercel.app"
-                className="text-blue-600 hover:text-blue-700 inline-flex items-center"
-              >
-                Rydon's Code Craftmania Bootcamp{" "}
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </p>
-            <p className="text-muted-foreground">
-              Got students that learnt courses in web development.
-            </p>
-          </section>
 
-          {/* My Year in Pictures */}
-          <section>
-            <h2 className="text-2xl font-medium">My Year in Pictures</h2>
-            <p className="text-muted-foreground mb-6">
-              Some placeswhere i show face sha😂.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 z-0">
-              {[
-                {
-                  src: "/assets/6.jpg?height=400&width=400",
-                  alt: "Fusion Tech Fest 2024",
-                  caption: "Fusion Tech Fest 2024",
-                },
-                {
-                  src: "/assets/1.jpg?height=400&width=400",
-                  alt: "Me and Ameen At FTF24",
-                  caption: "Me and Ameen At FTF24",
-                },
-                {
-                  src: "/assets/2.jpg?height=400&width=400",
-                  alt: "My Cofounder & I with Renzo of Swiftyhost",
-                  caption: "My Cofounder & I with Renzo of Swiftyhost",
-                },
-                {
-                  src: "/assets/3.jpg?height=400&width=400",
-                  alt: "Coding Session",
-                  caption: "👀",
-                },
-                {
-                  src: "/assets/4.jpg?height=400&width=400",
-                  alt: "Award Ceremony",
-                  caption: "Do Not View",
-                },
-              ].map((image, index) => (
-                <div
-                  key={index}
-                  className="group relative aspect-square overflow-hidden rounded-lg bg-gray-100"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300" />
-                  <p className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
-                    {image.caption}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
 
-          {/* Favorite Spotify Playlists */}
-          <section>
-            <h2 className="text-2xl font-medium mb-6 flex items-center gap-2">
-              <Music className="w-6 h-6" />
-              My Favorite Playlists
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2">
-              {/* Main Playlist */}
-              <div className="aspect-video rounded-lg overflow-hidden bg-black">
-                <iframe
-                  className="border-radius:12px"
-                  src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4WYpdgoIcn6?utm_source=generator"
-                  width="100%"
-                  height="352"
-                  frameBorder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              </div>
-              {/* Coding Playlist */}
-              <div className="aspect-video rounded-lg overflow-hidden bg-black">
-                <iframe
-                  className="border-radius:12px"
-                  src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTLSN7iG21yC?utm_source=generator"
-                  width="100%"
-                  height="352"
-                  frameBorder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Music that keeps me coding and creating. Feel free to follow these
-              playlists!
-            </p>
-          </section>
 
-          {/* Testimonials */}
-          <section>
-            <h2 className="text-2xl font-medium mb-4">Testimonials</h2>
-            <div className="space-y-6">
-              <blockquote className="border-l-4 pl-4 italic">
-                "Aj's works have always been clean and mindblowingly amazing
-                right from when i knew him."
-                <footer className="mt-2 text-sm text-muted-foreground">
-                  — Elochukwu
-                </footer>
-              </blockquote>
+    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-16 mb-20 md:mb-0">
+      <h1 className="text-5xl font-bold text-center mb-4">
+        Professional <span className="text-gradient font-fancy">Portfolio</span>
+      </h1>
 
-              <blockquote className="border-l-4 pl-4 italic">
-                "He consistently ships{" "}
-                <span className="text-gradient">high-quality</span> products
-                quickly. He is a very reliable asset to any team!"{" "}
-                <footer className="mt-2 text-sm text-muted-foreground">
-                  — Founder, Cubicle
-                </footer>
-              </blockquote>
-            </div>
-            <p className="mt-4 text-muted-foreground">...and many more.</p>
-          </section>
-        </div>
+      <p className="text-center text-muted-foreground mb-12">
+        Expertise in software engineering, technical leadership, and impactful solutions.
+      </p>
 
-        {/* Contact Section */}
+      <div className="space-y-12">
+        {/* Professional Achievements */}
         <section>
-          <h2 className="text-2xl font-medium mt-6">Contact Me.</h2>
-          <p className="text-muted-foreground mb-4">
-            Reach out to me{" "}
-            <Link
-              href="mailto:ajfred2008@gmail.com"
-              className="text-blue-600 hover:text-blue-700 inline-flex items-center gap-1"
-            >
-              ajfred2008@gmail.com <ArrowUpRight className="w-4 h-4" />
-            </Link>
-          </p>
-
-          <div className="flex gap-4">
-            <Link
-              href="https://github.com/ajfred20"
-              className="text-foreground hover:text-blue-600"
-            >
-              Github <ArrowUpRight className="w-4 h-4 inline" />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/fred-aj/"
-              className="text-foreground hover:text-blue-600"
-            >
-              Linkedin <ArrowUpRight className="w-4 h-4 inline" />
-            </Link>
-            <Link
-              href="https://x.com/iamajfred_"
-              className="text-foreground hover:text-blue-600"
-            >
-              Twitter <ArrowUpRight className="w-4 h-4 inline" />
-            </Link>
+          <h2 className="text-2xl font-medium mb-4">Key Achievements</h2>
+          <div className="space-y-4">
+            <div className="p-4 border rounded-lg">
+              <h3 className="font-medium">Technical Leadership</h3>
+              <p className="mb-2">
+                Led a logistics team at{" "}
+                <Link
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 inline-flex items-center"
+                >
+                  Trip Value{" "}
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </p>
+              <p className="text-muted-foreground">
+                Successfully managed and optimized delivery routes, reducing delivery times by 30% and improving customer satisfaction scores.
+              </p>
+            </div>
+            
+            <div className="p-4 border rounded-lg">
+              <h3 className="font-medium">Project Delivery</h3>
+              <p className="text-muted-foreground">
+                Implemented an automated tracking system that increased delivery accuracy by 45% and reduced operational costs by streamlining the logistics workflow.
+              </p>
+            </div>
           </div>
         </section>
-      </main>
+
+        {/* Technologies & Skills */}
+        <section>
+          <h2 className="text-2xl font-medium mb-4">Technical Expertise</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {["React", "TypeScript", "Next.js", "Java", "SpringBoot", "RESTful APIs","Micro Frontend" ,"MySQL",
+              "CI/CD", "AWS", "Microservices", "PostgreSQL", "System Design", "Technical Mentorship"].map((skill, index) => (
+              <div key={index} className="bg-gray-50 p-3 rounded-md text-center">
+                {skill}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Favorite Development Environment */}
+        <section>
+          <h2 className="text-2xl font-medium mb-6 flex items-center gap-2">
+            <Music className="w-6 h-6" />
+            Development Environment
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Development Playlist */}
+            <div className="aspect-video rounded-lg overflow-hidden bg-black">
+              <iframe
+                className="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTLSN7iG21yC?utm_source=generator"
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+            {/* Dev Setup Description */}
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="p-4 border rounded-lg">
+                <h3 className="font-medium">Preferred Stack</h3>
+                <p className="text-muted-foreground">
+                  TypeScript, React, Java with a focus on performance optimization and clean architecture.
+                </p>
+              </div>
+              <div className="p-4 border rounded-lg">
+                <h3 className="font-medium">Development Philosophy</h3>
+                <p className="text-muted-foreground">
+                  Building elegant solutions to complex problems through maintainable code and robust engineering practices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section>
+          <h2 className="text-2xl font-medium mb-4">Testimonials</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <blockquote className="border-l-4 pl-4 italic p-4 bg-gray-50 rounded-r-lg">
+              "Oluwaseyi's works have always been clean and mindblowingly amazing. His attention to detail and architectural decisions create solutions that stand the test of time."
+              <footer className="mt-2 text-sm text-muted-foreground">
+                — Felix, Engineering Manager(Stering Bank)
+              </footer>
+            </blockquote>
+
+            <blockquote className="border-l-4 pl-4 italic p-4 bg-gray-50 rounded-r-lg">
+              "He consistently ships <span className="text-gradient">high-quality</span> products quickly. He is a very reliable asset to any team, bringing both technical expertise and leadership."
+              <footer className="mt-2 text-sm text-muted-foreground">
+                — Founder, TripValue
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+      </div>
+
+      {/* Contact Section */}
+      <section className="mt-16 p-6 border rounded-lg">
+        <h2 className="text-2xl font-medium mb-4">Professional Contact</h2>
+        <p className="text-muted-foreground mb-6">
+          I'm open to discussing engineering leadership opportunities and technical collaborations.
+        </p>
+        
+        <div className="flex flex-col md:flex-row md:items-center gap-6">
+          <Link
+            href="mailto:ajfred2008@gmail.com"
+            className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+          >
+            <Mail className="w-5 h-5" />
+           oluwaseyiadeoti825@gmail.com
+          </Link>
+          
+          <div className="flex gap-6">
+            <Link
+              href="https://github.com/seyi-react"
+              className="flex items-center gap-1 text-foreground hover:text-blue-600"
+            >
+              <Github className="w-5 h-5" />
+              <span className="hidden md:inline">GitHub</span>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/seyi-240/"
+              className="flex items-center gap-1 text-foreground hover:text-blue-600"
+            >
+              <Linkedin className="w-5 h-5" />
+              <span className="hidden md:inline">LinkedIn</span>
+            </Link>
+            <Link
+              href="https://x.com/EngrAdeoti"
+              className="flex items-center gap-1 text-foreground hover:text-blue-600"
+            >
+              <Twitter className="w-5 h-5" />
+              <span className="hidden md:inline">Twitter</span>
+            </Link>
+          </div>
+        </div>
+        
+        <p className="mt-6 text-sm text-muted-foreground">
+          ©  • Senior Software Engineer
+        </p>
+      </section>
+    </main>
+
     </div>
   );
 }
