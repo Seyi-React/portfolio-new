@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oluwaseyi Adeoyi",
+  title: "Oluwaseyi Adeoti",
   description: "Frontend Developer",
   icons: {
     icon: "/favicon.ico?v=1",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Oluwaseyi Adeoti - Frontend Developer",
     description: "Frontend Developer crafting amazing user interfaces",
-    url: "https://ajfred.vercel.app",
+    url: "https://oluwaseyiadeoti.netlify.app",
     siteName: "Engr Seyi Portfolio",
     images: [
       {

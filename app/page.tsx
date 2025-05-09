@@ -19,6 +19,7 @@ import { useState } from "react";
 import BlurMenu from "../components/BlurMenu";
 import { useToast } from "../hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import { Download } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -111,6 +112,9 @@ export default function Home() {
           >
             Book a Call
           </Link>
+
+
+
         </nav>
       </header>
 
@@ -173,14 +177,24 @@ export default function Home() {
             night.
           </p>
 
-          <div className="flex gap-3 lg:gap-4">
+          <div className="flex flex-col md:flex-row gap-3 lg:gap-4">
             <Link
               href="#contact"
               className="bg-black text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full hover:opacity-90 scroll-smooth text-sm lg:text-base"
             >
               Book a Call
             </Link>
-            <div className="flex items-center gap-2 bg-green-50 text-green-800 px-4 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-base">
+
+            <a
+              href="/assets/oluwaseyi.pdf"
+              download="ADEOTI_OLUWASEYI_CV.pdf"
+              className="flex items-center justify-center gap-2 bg-white border border-black text-black px-4 py-2 lg:px-6 lg:py-3 rounded-full hover:bg-gray-50 text-sm lg:text-base"
+            >
+              <Download className="w-4 h-4 lg:w-5 lg:h-5" />
+              Download CV
+            </a>
+
+            <div className="flex items-center justify-center gap-2 bg-green-50 text-green-800 px-4 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-base">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
