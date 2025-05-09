@@ -400,8 +400,8 @@ export default function Home() {
             // onSubmit={handleSubmit}
             name="contact"
             
-            method="post"
-            data-netlify="true"
+            // method="post"
+            // data-netlify="true"
             className="w-full max-w-2xl mx-auto space-y-4 lg:space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
