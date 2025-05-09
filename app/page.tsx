@@ -204,102 +204,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <div className="flex flex-col items-center text-center mt-12">
-          <h1 className="text-3xl lg:text-5xl font-bold mb-4 tracking-[-0.02em] flex items-center justify-center gap-2">
-            Some of My <span className="font-fancy">Works</span>
-          </h1>
-
-          <p className="text-sm lg:text-base text-gray-600 mb-8 max-w-xl">
-            Check out some of my passion projects born with the energy from my
-            Heart🩷, Brain🧠 & Spirit🌀
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 w-full max-w-5xl mx-auto">
-            {[
-              {
-                src: "/assets/1.1.png",
-                alt: "Collocate",
-                caption: "Collocate",
-                livePreview: "https://collocate.vercel.app",
-                github: "https://github.com/ajfred20/collocate",
-              },
-              {
-                src: "/assets/1.2.png",
-                alt: "Canvax",
-                caption: "Canvax",
-                livePreview: "https://aj-canvax.vercel.app",
-                github: "https://github.com/ajfred20/canvax",
-              },
-              {
-                src: "/assets/1.3.png",
-                alt: "Linkify",
-                caption: "Linkify",
-                livePreview: "https://linkify-io.vercel.app",
-                github: "#",
-              },
-              {
-                src: "/assets/1.4.png",
-                alt: "Luro",
-                caption: "Luro",
-                livePreview: "https://luro-ai.vercel.app",
-                github: "#",
-              },
-              {
-                src: "/assets/1.5.png",
-                alt: "Brainwave",
-                caption: "Brainwave",
-                livePreview: "https://brainwave-9ja.vercel.app/",
-                github: "#",
-              },
-              {
-                src: "/assets/1.6.png",
-                alt: "Rewrap",
-                caption: "Rewrap",
-                livePreview: "https://rewrap.vercel.app/",
-                github: "https://github.com/ajfred20/rewrap",
-              },
-            ].map((project, index) => (
-              <div
-                key={index}
-                className="group relative h-[200px] lg:h-[300px] overflow-hidden rounded-2xl bg-gray-100 w-full"
-              >
-                <Image
-                  src={project.src}
-                  alt={project.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={index < 2}
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center gap-3 lg:gap-4">
-                  <p className="text-white text-base lg:text-lg font-medium">
-                    {project.caption}
-                  </p>
-                  <div className="flex gap-3 lg:gap-4">
-                    <a
-                      href={project.livePreview}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center bg-white text-black px-4 py-1.5 lg:px-6 lg:py-2 rounded-lg text-sm lg:text-base font-medium hover:bg-opacity-90 transition-colors"
-                    >
-                      <EyeIcon className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center bg-black text-white px-4 py-1.5 lg:px-6 lg:py-2 rounded-lg text-sm lg:text-base font-medium hover:bg-opacity-90 transition-colors border border-white"
-                    >
-                      <Github className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
-                      GitHub
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
+      
 
         <div className="flex flex-col items-center text-center mt-12">
           <h1 className="text-3xl lg:text-5xl font-bold mb-4 tracking-[-0.02em] flex items-center justify-center gap-2">
@@ -494,6 +399,9 @@ export default function Home() {
           <form
             // onSubmit={handleSubmit}
             name="contact"
+            
+            method="post"
+            data-netlify="true"
             className="w-full max-w-2xl mx-auto space-y-4 lg:space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
