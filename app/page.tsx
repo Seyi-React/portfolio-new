@@ -186,7 +186,7 @@ export default function Home() {
             </Link>
 
             <a
-              href="/assets/oluwaseyi.pdf"
+              href="/assets/OLUWASEYI ADEOTI'S CV.pdf"
               download="ADEOTI_OLUWASEYI_CV.pdf"
               className="flex items-center justify-center gap-2 bg-white border border-black text-black px-4 py-2 lg:px-6 lg:py-3 rounded-full hover:bg-gray-50 text-sm lg:text-base"
             >
