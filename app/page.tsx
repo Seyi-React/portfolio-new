@@ -15,7 +15,7 @@ import {
   Sparkles,
   EyeIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlurMenu from "../components/BlurMenu";
 import { useToast } from "../hooks/use-toast";
 import emailjs from "@emailjs/browser";
@@ -63,8 +63,36 @@ export default function Home() {
     }
   };
 
+  // Preloader state
+  const [showPreloader, setShowPreloader] = useState(true);
+  // Hide preloader after 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPreloader(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {showPreloader && (
+        <div className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-black">
+          <div className="text-center space-y-6 animate-fadein">
+            <h1 className="text-3xl md:text-5xl text-white font-bold">
+              Hey there! I'm Oluwaseyi Adeoti
+            </h1>
+            <p className="text-xl md:text-3xl text-gray-300">
+              And Welcome to my world...
+            </p>
+            <div className="w-16 h-16 border-4 border-blue-400 rounded-full animate-spin mx-auto mt-6"></div>
+          </div>
+        </div>
+      )}
+      <div className="min-h-screen bg-white relative overflow-x-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-to-tr from-pink-200 via-blue-100 to-purple-200 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/3 w-1/4 h-1/4 bg-gradient-to-r from-purple-200 to-blue-200 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+      </div>
       {/* Header */}
       <header className="hidden lg:flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-4">
@@ -154,13 +182,29 @@ export default function Home() {
       {/* Main Content */}
       <main className="max-w-3xl mx-auto px-4 pt-16 lg:pt-20 pb-24 md:pb-0">
         <div className="flex flex-col items-center text-center">
-          <Image
-            src="/assets/fred.jpg"
-            alt="Profile"
-            width={120}
-            height={120}
-            className="rounded-full mb-6 lg:mb-8 w-24 h-24 lg:w-32 lg:h-32"
-          />
+          <div className="relative mb-6 lg:mb-8">
+            <Image
+              src="/assets/fred.jpg"
+              alt="Profile"
+              width={120}
+              height={120}
+              className="rounded-full w-24 h-24 lg:w-32 lg:h-32 border-4 border-blue-300 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              style={{ boxShadow: '0 0 32px 0 rgba(99,102,241,0.25)' }}
+            />
+            <span className="absolute -bottom-2 right-2 w-6 h-6 bg-gradient-to-tr from-blue-400 to-purple-400 rounded-full blur-sm opacity-70 animate-pulse"></span>
+          </div>
+          {/* Animated Skill Badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Java', 'Chakra UI', 'Material UI', 'Styled Components', 'SpringBoot', 'RESTful APIs', 'Design Sysytems'].map((tech, i) => (
+              <span
+                key={i}
+                className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white font-semibold shadow-lg animate-bounce"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
 
           <h1 className="text-3xl lg:text-5xl font-bold mb-4 tracking-[-0.02em]">
             Hey, I&apos;m Oluwaseyi Adeoti.
@@ -186,7 +230,7 @@ export default function Home() {
             </Link>
 
             <a
-              href="/assets/OLUWASEYI ADEOTI'S CV.pdf"
+              href="/assets/ADEOTI-OLUWASEYI-CV.pdf"
               download="ADEOTI_OLUWASEYI_CV.pdf"
               className="flex items-center justify-center gap-2 bg-white border border-black text-black px-4 py-2 lg:px-6 lg:py-3 rounded-full hover:bg-gray-50 text-sm lg:text-base"
             >
@@ -346,7 +390,8 @@ export default function Home() {
                 alt="Avatar"
                 width={60}
                 height={60}
-                className="rounded-full mb-2 w-[30px] md:w-[40px] lg:w-[60px]"
+                className="rounded-full mb-2 w-[30px] md:w-[40px] lg:w-[60px] border-2 border-purple-300 shadow-lg hover:scale-110 transition-transform duration-300"
+                style={{ boxShadow: '0 0 16px 0 rgba(139,92,246,0.18)' }}
               />
             </div>
 
@@ -356,7 +401,8 @@ export default function Home() {
                 alt="Avatar"
                 width={60}
                 height={60}
-                className="rounded-full w-[30px] md:w-[40px] lg:w-[60px]"
+                className="rounded-full w-[30px] md:w-[40px] lg:w-[60px] border-2 border-blue-300 shadow-lg hover:scale-110 transition-transform duration-300"
+                style={{ boxShadow: '0 0 16px 0 rgba(59,130,246,0.18)' }}
               />
             </div>
 
@@ -366,7 +412,8 @@ export default function Home() {
                 alt="Avatar"
                 width={60}
                 height={60}
-                className="rounded-full w-[30px] md:w-[40px] lg:w-[60px]"
+                className="rounded-full w-[30px] md:w-[40px] lg:w-[60px] border-2 border-pink-300 shadow-lg hover:scale-110 transition-transform duration-300"
+                style={{ boxShadow: '0 0 16px 0 rgba(236,72,153,0.18)' }}
               />
             </div>
 
@@ -376,7 +423,8 @@ export default function Home() {
                 alt="Avatar"
                 width={60}
                 height={60}
-                className="rounded-full w-[30px] md:w-[40px] lg:w-[60px]"
+                className="rounded-full w-[30px] md:w-[40px] lg:w-[60px] border-2 border-blue-300 shadow-lg hover:scale-110 transition-transform duration-300"
+                style={{ boxShadow: '0 0 16px 0 rgba(59,130,246,0.18)' }}
               />
             </div>
           </div>
@@ -384,7 +432,7 @@ export default function Home() {
 
         <div
           id="contact"
-          className="flex flex-col items-center text-center mt-16 lg:mt-20 mb-16 lg:mb-20"
+          className="flex flex-col items-center text-center mt-16 lg:mt-20 mb-16 lg:mb-20 opacity-0 translate-y-8 animate-fadein"
         >
           <h1 className="text-3xl lg:text-5xl font-bold tracking-[-0.02em] flex items-center justify-center gap-2">
             Get in touch
@@ -397,12 +445,19 @@ export default function Home() {
             discuss a potential project.
           </p>
 
+          {/* Book a Call Button with Number */}
+          <a
+            href="tel:+2349079036407"
+            className="inline-flex items-center gap-3 px-6 py-3 mb-8 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 animate-pulse"
+            style={{ boxShadow: '0 4px 24px rgba(99,102,241,0.15)' }}
+          >
+            <Sparkles className="w-6 h-6 animate-spin" />
+            Book a Call: <span className="tracking-wide">+234 907 903 6407</span>
+          </a>
+
           <form
             // onSubmit={handleSubmit}
             name="contact"
-            
-            // method="post"
-            // data-netlify="true"
             className="w-full max-w-2xl mx-auto space-y-4 lg:space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
@@ -442,7 +497,7 @@ export default function Home() {
         {/* Footer Section */}
         <footer className="bg-white text-black py-12 lg:py-16 mt-16 lg:mt-20">
           <div className="max-w-6xl mx-auto px-4">
-            <div className="border-t border-gray-400 w-full mt-8 lg:mt-12 pt-6 lg:pt-8 group">
+            <div className="border-t border-gray-400 w-full mt-8 lg:mt-12 pt-6 lg:pt-8 group opacity-0 translate-y-8 animate-fadein">
               <p className="text-gray-400 text-xs lg:text-sm">
                 © {new Date().getFullYear()} by{" "}
                 <a
@@ -457,6 +512,24 @@ export default function Home() {
           </div>
         </footer>
       </main>
+      {/* Fade-in and bounce animation keyframes */}
+      <style jsx global>{`
+        @keyframes fadein {
+          0% { opacity: 0; transform: translateY(32px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadein {
+          animation: fadein 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-bounce {
+          animation: bounce 1.2s infinite;
+        }
+      `}</style>
     </div>
+    </>
   );
 }
